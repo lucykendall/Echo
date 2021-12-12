@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Home() {
+export default function Play() {
     return (
         <div>
-            <h1>Hi!!!</h1>
+            <h1>Memory Game!</h1>
         </div>
     )
 }
