@@ -46,8 +46,9 @@ export default function UpdateAccount() {
     <>
       <Card>
         <Card.Body>
-          <h2 className="text-center mb-4">Update Profile</h2>
+          <h2 className="text-center mb-4">Update Account</h2>
           {error && <Alert variant="danger">{error}</Alert>}
+          <h3 className="text-center mb-10">You can update your email or password</h3>
           <Form onSubmit={handleSubmit}>
             <Form.Group id="email">
               <Form.Label>Email</Form.Label>
