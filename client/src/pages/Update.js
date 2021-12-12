@@ -3,7 +3,7 @@ import { Form, Button, Card, Alert } from "react-bootstrap"
 import { useAuth } from "../contexts/AuthContext"
 import { Link, useNavigate } from "react-router-dom"
 
-export default function UpdateProfile() {
+export default function UpdateAccount() {
   const emailRef = useRef()
   const passwordRef = useRef()
   const passwordConfirmRef = useRef()
@@ -12,13 +12,13 @@ export default function UpdateProfile() {
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
 
-  function handleSubmit(e) {
-    e.preventDefault()
+  function handleSubmit(event) {
+    event.preventDefault()
     if (passwordRef.current.value !== passwordConfirmRef.current.value) {
       return setError("Passwords do not match")
     }
 
-    const promises = []
+    const promises = [] //need to create an array of promises. We want to wait to see if all fields are updated before we push the promise
     setLoading(true)
     setError("")
 
@@ -29,14 +29,15 @@ export default function UpdateProfile() {
       promises.push(updatePassword(passwordRef.current.value))
     }
 
-    Promise.all(promises)
+    Promise.all(promises) //passing in the promises in promises which then executes a redirect to home
       .then(() => {
         navigate('/')
       })
       .catch(() => {
         setError("Failed to update account")
+        console.log(error)
       })
-      .finally(() => {
+      .finally(() => { //this is invoked when the promise is fulfilled whether it is successful or not
         setLoading(false)
       })
   }
@@ -62,7 +63,7 @@ export default function UpdateProfile() {
               <Form.Control
                 type="password"
                 ref={passwordRef}
-                placeholder="Leave blank to keep the same"
+                placeholder="enter a new password"
               />
             </Form.Group>
             <Form.Group id="password-confirm">
@@ -70,7 +71,7 @@ export default function UpdateProfile() {
               <Form.Control
                 type="password"
                 ref={passwordConfirmRef}
-                placeholder="Leave blank to keep the same"
+                placeholder="confirm your new password"
               />
             </Form.Group>
             <Button disabled={loading} className="w-100" type="submit">
@@ -80,7 +81,7 @@ export default function UpdateProfile() {
         </Card.Body>
       </Card>
       <div className="w-100 text-center mt-2">
-        <Link to="/">Cancel</Link>
+        <Link to="/account">Cancel</Link>
       </div>
     </>
   )

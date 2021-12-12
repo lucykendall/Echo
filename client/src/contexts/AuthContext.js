@@ -24,6 +24,18 @@ export function AuthProvider({ children }) {
         return auth.signOut()
     }
 
+    function resetPassword(email) {
+        return auth.sendPasswordResetEmail(email)
+    }
+
+    function updateEmail(email) {
+        return currentUser.updateEmail(email)
+    }
+    
+    function updatePassword(password) {
+        return currentUser.updatePassword(password)
+    }
+
     useEffect(() => { //only want to run this when we mount the component
         const unsubscribe = auth.onAuthStateChanged(user => { // notifies you whenever user gets changed
             setCurrentUser(user)
@@ -33,15 +45,18 @@ export function AuthProvider({ children }) {
         return unsubscribe //unsubscribes from the listener when the component is unmounted 
     }, [])
 
-    const value = {
+    const variables = {
         currentUser,
         signup,
         login,
-        logout //exporting function
+        logout,
+        resetPassword,
+        updateEmail,
+        updatePassword //exporting function
     }
     //if not loading, we want to render out the children
     return ( 
-        <AuthContext.Provider value={value}>
+        <AuthContext.Provider value={variables}>
             {!loading && children} 
         </AuthContext.Provider>
     )

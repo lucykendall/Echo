@@ -7,9 +7,10 @@ import Login from './pages/Login'
 import Home from './pages/Home'
 import Account from './pages/Account'
 import SignUp from './pages/SignUp'
-import Update from './pages/Update'
-import Navbar from './components/Navbar';
+import UpdateAccount from './pages/Update';
+// import Navbar from './components/Navbar';
 import Play from './pages/Play';
+import ForgotPassword from './pages/ForgotPassword';
 
 function App() {
 
@@ -18,7 +19,6 @@ function App() {
     className="d-flex align-items-center justify-content-center"
     style={{ minHeight: "100vh" }}>
     <div className="w-100" style={{ maxWidth: "400px" }}>
-      <Navbar />
         <Router>
             <AuthProvider>
               <Routes>
@@ -26,6 +26,7 @@ function App() {
                 <Route path="/signup" element={<SignUp/>} />
                 <Route path="/play" element={<Play/>} />
                 <Route path="/login" element={<Login/>} />
+                <Route path="/forgot-password" element={<ForgotPassword/>} />
                 <Route
                   path="/account"
                   element={
@@ -38,7 +39,7 @@ function App() {
                   path="/account/update"
                   element={
                     <PrivateRoute redirectTo="/login">
-                      <Update />
+                      <UpdateAccount />
                     </PrivateRoute>
                   }
                 />
