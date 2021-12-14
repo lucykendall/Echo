@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Container } from 'react-bootstrap'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { AuthProvider } from './contexts/AuthContext';
