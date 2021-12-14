@@ -9,11 +9,12 @@ const theme = {
       lightBlue: "#AFDBD2",
       onyx: "#36313D"
     },
-    fonts: [${Raleigh}, "Roboto"],
-    fontSizes: {
-      small: "1em",
-      medium: "2em",
-      large: "3em"
+    font: {
+      fontFamily: 'Raleigh',
+      src: `
+        localStorage('Raleigh'),
+        url(${Raleigh}) format('woff2')
+      `
     }
   }
 
