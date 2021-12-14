@@ -9,8 +9,7 @@ import Home from './pages/Home'
 import Account from './pages/Account'
 import SignUp from './pages/SignUp'
 import UpdateAccount from './pages/Update';
-// import Navbar from './components/Navbar';
-import Play from './pages/Play';
+import Play from './pages/Play'
 import ForgotPassword from './pages/ForgotPassword';
 import About from './pages/About';
 
@@ -20,7 +19,7 @@ function App() {
     <Container
     className="d-flex align-items-center justify-content-center"
     style={{ minHeight: "100vh" }}>
-    <div className="w-100" style={{ maxWidth: "400px" }}>
+    <div className="w-100" style={{ maxWidth: "1000px" }}>
         <Router>
           <NavBar />
             <AuthProvider>
