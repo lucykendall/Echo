@@ -8,7 +8,49 @@ import SharkImg from './Fish/shark.png'
 import TropicalImg from './Fish/tropical.png'
 import BackImg from './Fish/seaweed.png'
 
-const fishImages = [ButterflyImg, ClownFishImg, CrabImg, OctopusImg, PrawnImg, SharkImg, RoyalAngelImg, TropicalImg]
+const fishImages = [
+    {
+        name: 'Butterfly',
+        image: ButterflyImg,
+    },
+
+    {
+        name: 'Clownfish',
+        image: ClownFishImg,
+    },
+
+    {
+        name: 'Crab',
+        image: CrabImg,
+    },
+
+    {
+        name: 'Octopus',
+        image: OctopusImg,
+    },
+
+    {   
+        name: 'Prawn',
+        image: PrawnImg,
+    },
+
+    {   
+        name: 'Royal Angel',
+        image: RoyalAngelImg,
+    },
+
+    {   
+        name: 'Shark',
+        image: SharkImg,
+    },
+
+    {   
+        name: 'Tropical-Fish',
+        image: TropicalImg,
+    }
+];
+    
+
 
 export { fishImages, BackImg };
 

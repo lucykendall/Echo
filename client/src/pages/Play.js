@@ -1,6 +1,6 @@
 import React from 'react'
-import { Container, Button } from 'react-bootstrap';
-import Board from '../components/game/Board'
+import { Container } from 'react-bootstrap';
+import Board from '../components/game/Board';
 
 export default function Play() { 
 

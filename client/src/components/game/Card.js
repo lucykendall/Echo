@@ -1,7 +1,10 @@
 import React from "react";
 
-export default function Card() { //only use props not state
+export default function Card( props ) {
+     //only use props not state
     return (
-        <div><img src={ props.card } alt="card"/></div>
+        <div className="individual-card">
+            <img className="front" src={ props.card.image } style={{ height: 200, width: 200}} alt="card"/>
+        </div>
     )
 }
