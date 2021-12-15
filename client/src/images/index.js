@@ -6,7 +6,7 @@ import PrawnImg from './Fish/prawns.png'
 import RoyalAngelImg from './Fish/prawns.png'
 import SharkImg from './Fish/shark.png'
 import TropicalImg from './Fish/tropical.png'
-import BackImg from './Fish/seaweed.png'
+import Seaweed from './Fish/seaweed.png'
 
 const fishImages = [
     {
@@ -52,6 +52,6 @@ const fishImages = [
     
 
 
-export { fishImages, BackImg };
+export { fishImages, Seaweed };
 
 
