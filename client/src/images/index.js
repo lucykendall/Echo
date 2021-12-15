@@ -12,41 +12,49 @@ const fishImages = [
     {
         name: 'Butterfly',
         image: ButterflyImg,
+        solved: false,
     },
 
     {
         name: 'Clownfish',
         image: ClownFishImg,
+        solved: false,
     },
 
     {
         name: 'Crab',
         image: CrabImg,
+        solved: false,
     },
 
     {
         name: 'Octopus',
         image: OctopusImg,
+        solved: false,
     },
 
     {   
         name: 'Prawn',
         image: PrawnImg,
+        solved: false,
     },
 
     {   
         name: 'Royal Angel',
         image: RoyalAngelImg,
+        solved: false,
     },
 
     {   
         name: 'Shark',
         image: SharkImg,
+        solved: false,
     },
 
     {   
         name: 'Tropical-Fish',
         image: TropicalImg,
+        solved: false,
     }
 ];
     

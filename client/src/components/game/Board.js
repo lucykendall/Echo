@@ -5,10 +5,10 @@ import Card from './Card'
 
 export default function Board() {
     const [cards, setCards] = useState([]) //a selection of cards
-    const [openHand, setOpenHand] = useState([]) // cards open, only two at a time
-    const [matchedCards, setMatchedCards] = useState({}) // cards matched up, i.e. no longer able to be matched
-    const [turns, setTurns] = useState(0);
-    const [flipped, setFlipped] = useState(false)
+    const [selection1, setSelection1] = useState(undefined) // cards open, only two at a time
+    const [selection2, setSelection2] = useState(undefined) // cards matched up, i.e. no longer able to be matched
+    const [go, setGos] = useState(0);
+    const [clicked, setClicked] = useState(false)
 
     //randomising cards
     function randomiseCards() { 
@@ -16,70 +16,70 @@ export default function Board() {
         .map((card) => ({ ...card, key: Math.random() }));
         //https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
 
+        setSelection1(undefined)
+        setSelection2(undefined)
         setCards(randomiseCards)
-        setOpenHand([])
-        setMatchedCards({})
-        setTurns(0);
+        setGos(0);
     }
 
-    function handleClick(index) {
-        if (openHand.length === 1) {
-            setOpenHand((prevCard) => [...prevCard, index])
-            setTurns((turns) => turns += 1)
+    function handleClick(card) {
+        if (selection1) {
+            setSelection2(card)
         } else {
-            setOpenHand([index])
+            setSelection1(card)
         }
     }
 
-    function cardMatch() {
-        const firstCard = openHand;
-        const secondCard = openHand;
-
-        if (cards[firstCard].name === cards[secondCard].name) {
-            setMatchedCards((prevCards) => {
-                return prevCards.map((card) => {
-                    if (card.name === cards[firstCard].name) {
-                        setOpenHand([])
-                        return { ... card, solved: true}
-                    }
+useEffect(() => {
+        if (selection1 && selection2) {
+            setClicked(true);
+            if (selection1.name === selection2.name) {
+                setCards((prevCards) => {
+                    return prevCards.map((card) => {
+                        if (card.name === selection1.name) {
+                            return { ...card, solved: true}
+                        } else {
+                            return card
+                        }
+                    })
                 })
-            })
-        } else {
-            setTimeout(() => { setOpenHand([]) }, 500);
+                nextGo()
+            } else {
+                setTimeout(() => nextGo(), 500)
+            }
         }
-    }
+ }, [selection1, selection2]);
 
-    function checkCardSolved(card) {
-        if (matchedCards[card.solved] === true) {
-            setFlipped(true)
-        }
-    }
+ function nextGo() {
+     setSelection1(undefined)
+     setSelection2(undefined)
+     setGos((turnBefore) => turnBefore + 1);
+     setClicked(false)
+ }
 
-    useEffect(() => {
-        if (openHand.length === 2) {
-            setTimeout(cardMatch, 500);
-        }
-    }, [openHand])
-
-    useEffect(() => { // if player ticks checks new game, listens for a new game
-        randomiseCards();
-    }, []);
+ useEffect(() => {
+     randomiseCards();
+ }, []);
 
     return (
         <div className="board">
             <Row>
                 { cards.map((card, index) =>(
-                    <Col xs="12" sm="3">
-                    <Card key={card.key} id='name'
-                        card={card}
-                        index={index}
-                        onClick={handleClick}
-                        flipped={checkCardSolved(card)}
-                        />
-                    </Col>
+                        <Col key={card.key} xs="14" sm="3">
+                            <Card id='name'
+                                card={card}
+                                index={index}
+                                handleClick={handleClick}
+                                clicked={clicked}
+                                front={card === selection1 || card === selection2 || card.solved}
+                                />
+                        </Col>
                 ))}
             </Row>
-            <Button style={{ backgroundColor: "#FB6245", color: "#fff" }} variant="outline-primary" onClick={randomiseCards}>New Game</Button>{' '}
+            <Row>
+                <Button className="w-25 d-flex align-self-center justify-content-center" style={{ backgroundColor: "#FB6245", color: "#ffff" }} variant="outline-primary" onClick={randomiseCards}>New Game</Button>{' '}
+                <p>{go}</p>
+            </Row>
         </div>
     )
 }

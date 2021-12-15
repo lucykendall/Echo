@@ -1,12 +1,20 @@
 import React from "react";
 import { Seaweed } from "../../images";
+ 
+export default function Card( {handleClick, front, clicked, card} ) { //only use props not state
+    function handleCardClick() {
+        if (!clicked) {
+            console.log(card)
+            handleClick(card)
+        }
+    }
 
-export default function Card( props ) {
-     //only use props not state
     return (
         <div className="individual-card">
-            <img className="back-img" src = { Seaweed } style={{ height: 100, width: 100}} alt="seaweed"/>
-            <img className="front-img" src={ props.card.image } style={{ height: 100, width: 100}} alt="fish"/>
+            <div className = {front ? "front" : ""}>
+                <img className="back-img" src = { Seaweed } onClick= { handleCardClick } style={{ height: 100, width: 100}} alt="seaweed"/>
+                <img className="front-img" src={ card.image } style={{ height: 100, width: 100}} alt="fish"/>
+            </div>
         </div>
     )
 }

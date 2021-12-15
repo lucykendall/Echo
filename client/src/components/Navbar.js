@@ -4,17 +4,17 @@ import img from '../images/echo_logo.png'
 
 export default function NavBar() {
     return (
-    <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: "#FA8164"}}>
+    <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: "#FA8164", borderRadius: "25px"}}>
     <Container className="d-flex align-items-center justify-content-center"
-    style={{ maxWidth: "860px", maxHeigh: "200px" }}>
-    <Navbar.Brand href="/"><img src={img} alt="logo" className="img-fluid" style={{ maxHeight: "200px" }}/>
+    style={{ maxWidth: "800px", maxHeight: "200px" }}>
+    <Navbar.Brand href="/"><img src={img} alt="logo" className="img-fluid" style={{ width: "100px" }}/>
     </Navbar.Brand>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="me-auto">
-        <Nav.Link href="/about">About</Nav.Link>
-        <Nav.Link href="/play">Play</Nav.Link>
-        <Nav.Link href="/signup">Signup</Nav.Link>
+        <Nav.Link href="/about" style={{ color: "#ffff"}}>About</Nav.Link>
+        <Nav.Link href="/play" style={{ color: "#ffff"}}>Play</Nav.Link>
+        <Nav.Link href="/signup" style={{ color: "#ffff"}}>Signup</Nav.Link>
         <NavDropdown title="Portal" id="collasible-nav-dropdown">
             <NavDropdown.Item href="/account/update">Account</NavDropdown.Item>
             <NavDropdown.Item href="/login">Login</NavDropdown.Item>

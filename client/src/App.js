@@ -13,6 +13,7 @@ import UpdateAccount from './pages/Update';
 import Play from './pages/Play'
 import ForgotPassword from './pages/ForgotPassword';
 import About from './pages/About';
+import './App.css'
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
     <Container
     className="d-flex align-items-center justify-content-center"
     style={{ minHeight: "100vh" }}>
-    <div className="w-100" style={{ maxWidth: "1000px" }}>
+    <div className="w-100" style={{ maxWidth: "900px" }}>
         <Router>
           <NavBar />
             <AuthProvider>

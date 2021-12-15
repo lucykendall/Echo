@@ -1,0 +1,20 @@
+.individual-card {
+    position: relative; }
+    .individual-card img {
+      width: 100%;
+      border: 2px solid #fff;
+      border-radius: 6px; }
+    .individual-card .front-img {
+      transform: rotateY(90deg);
+      transition: all ease-in .2s; }
+    .individual-card .back-img {
+      transition: all ease-in .2s;
+      transition-delay: .2s;}
+  
+.front .front-img {
+    transform: rotateY(0deg);
+    transition-delay: .2s; }
+  
+.front .back-img {
+    transform: rotateY(90deg);
+    transition-delay: 0s; }
