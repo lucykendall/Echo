@@ -3,7 +3,7 @@ import ClownFishImg from './Fish/clownfish.png';
 import CrabImg from './Fish/crab.png'
 import OctopusImg from './Fish/Octopus.png'
 import PrawnImg from './Fish/prawns.png'
-import RoyalAngelImg from './Fish/prawns.png'
+import RoyalAngelImg from './Fish/royalangelfish.png'
 import SharkImg from './Fish/shark.png'
 import TropicalImg from './Fish/tropical.png'
 import Seaweed from './Fish/seaweed.png'
@@ -40,7 +40,7 @@ const fishImages = [
     },
 
     {   
-        name: 'Royal Angel',
+        name: 'RoyalAngel',
         image: RoyalAngelImg,
         solved: false,
     },
@@ -52,7 +52,7 @@ const fishImages = [
     },
 
     {   
-        name: 'Tropical-Fish',
+        name: 'TropicalFish',
         image: TropicalImg,
         solved: false,
     }

@@ -4,9 +4,10 @@ import { fishImages } from "../../images/index";
 import Card from './Card'
 
 export default function Board() {
+    // const emptyCard = { name: '', key: 0, image: '', solved: false };
     const [cards, setCards] = useState([]) //a selection of cards
-    const [selection1, setSelection1] = useState(undefined) // cards open, only two at a time
-    const [selection2, setSelection2] = useState(undefined) // cards matched up, i.e. no longer able to be matched
+    const [selection1, setSelection1] = useState(null) // cards open, only two at a time
+    const [selection2, setSelection2] = useState(null) // cards matched up, i.e. no longer able to be matched
     const [go, setGos] = useState(0);
     const [clicked, setClicked] = useState(false)
 
@@ -16,8 +17,8 @@ export default function Board() {
         .map((card) => ({ ...card, key: Math.random() }));
         //https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
 
-        setSelection1(undefined)
-        setSelection2(undefined)
+        setSelection1(null)
+        setSelection2(null)
         setCards(randomiseCards)
         setGos(0);
     }
@@ -30,7 +31,7 @@ export default function Board() {
         }
     }
 
-useEffect(() => {
+useEffect(() => { //if cards match
         if (selection1 && selection2) {
             setClicked(true);
             if (selection1.name === selection2.name) {
@@ -45,14 +46,14 @@ useEffect(() => {
                 })
                 nextGo()
             } else {
-                setTimeout(() => nextGo(), 500)
+                setTimeout(() => nextGo(), 1000)
             }
         }
  }, [selection1, selection2]);
 
  function nextGo() {
-     setSelection1(undefined)
-     setSelection2(undefined)
+     setSelection1(null)
+     setSelection2(null)
      setGos((turnBefore) => turnBefore + 1);
      setClicked(false)
  }
@@ -71,14 +72,14 @@ useEffect(() => {
                                 index={index}
                                 handleClick={handleClick}
                                 clicked={clicked}
-                                front={card === selection1 || card === selection2 || card.solved}
+                                flipped={ card === selection1 || card === selection2 || card.solved} //card is flipped and to the front
                                 />
                         </Col>
                 ))}
             </Row>
             <Row>
-                <Button className="w-25 d-flex align-self-center justify-content-center" style={{ backgroundColor: "#FB6245", color: "#ffff" }} variant="outline-primary" onClick={randomiseCards}>New Game</Button>{' '}
-                <p>{go}</p>
+                <Button className="w-25 d-flex align-self-center justify-content-center" style={{ backgroundColor: "#FB6245", color: "#ffff" }} variant="outline-primary" onClick={randomiseCards}>New Game</Button>
+                <p>You have had {go} gos</p>
             </Row>
         </div>
     )

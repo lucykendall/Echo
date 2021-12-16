@@ -1,20 +1,33 @@
 import React from "react";
+import Flippy, {FrontSide, BackSide } from 'react-flippy';
 import { Seaweed } from "../../images";
+
+const FlippyStyle = {
+    width: '200px',
+    height: '300px',
+    justifyContent: 'center',
+}
  
-export default function Card( {handleClick, front, clicked, card} ) { //only use props not state
+export default function Card( {handleClick, flipped, clicked, card} ) { //only use props not state
     function handleCardClick() {
         if (!clicked) {
-            console.log(card)
             handleClick(card)
         }
     }
 
     return (
-        <div className="individual-card">
-            <div className = {front ? "front" : ""}>
-                <img className="back-img" src = { Seaweed } onClick= { handleCardClick } style={{ height: 100, width: 100}} alt="seaweed"/>
-                <img className="front-img" src={ card.image } style={{ height: 100, width: 100}} alt="fish"/>
+            <div className="individual-card">
+                <Flippy
+                    flipDirection="horizontal"
+                    isFlipped={flipped}
+                >
+                    <FrontSide>
+                        <img className="front-img" src = { Seaweed } onClick= { handleCardClick } alt="seaweed"/>
+                    </FrontSide>
+                    <BackSide>
+                        <img className="back-img" src ={ card.image } alt="fish"/>  
+                    </BackSide>
+                </Flippy>
             </div>
-        </div>
     )
 }
