@@ -75,9 +75,9 @@ export default function UpdateAccount() {
                 placeholder="confirm your new password"
               />
             </Form.Group>
-            <Button disabled={loading} className="w-100" type="submit">
-              Update
-            </Button>
+            <div class="col-md-12 text-center">
+                  <Button disabled={loading} className="w-25" style={{ backgroundColor: "#FB6245", color: "#ffff", marginTop: "5vh", borderColor: "rgb(249,244,257" }} variant="outline-primary" type="submit">Update</Button>
+            </div>
           </Form>
         </Card.Body>
       </Card>
