@@ -6,7 +6,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/lucykendall/Echo">
-    <img src="/client/src/images/echo_logo.png" alt="Logo" width="80" height="80">
+    <img src="/client/src/images/echo_logo.png" alt="Logo" width="150" height="150">
   </a>
 
 <h3 align="center">Echo Memory Game</h3>
