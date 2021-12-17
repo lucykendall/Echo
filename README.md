@@ -12,12 +12,10 @@
 <h3 align="center">Echo Memory Game</h3>
 
   <p align="center">
-    Need to test your memory!
+    Need to test your memory! Check out what is behind the seaweed to find your exotic fish friend!
     <br />
     <a href="https://github.com/lucykendall/Echo"><strong>Explore the docs »</strong></a>
     <br />
-    <br />
-    <a href="https://github.com/lucykendall/Echo">View Demo</a>
   </p>
 </div>
 
@@ -61,8 +59,9 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* [React-Bootstrap](https://react-bootstrap.github.io/)
+* [Firebase](https://firebase.google.com/docs)
+* [Flippy](https://www.npmjs.com/package/react-flippy)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
