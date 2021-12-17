@@ -6,7 +6,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/lucykendall/Echo">
-    <img src="images/echo_logo.png" alt="Logo" width="80" height="80">
+    <img src="/client/src/images/echo_logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Echo Memory Game</h3>
@@ -18,10 +18,6 @@
     <br />
     <br />
     <a href="https://github.com/lucykendall/Echo">View Demo</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
   </p>
 </div>
 
@@ -65,12 +61,6 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
 * [Bootstrap](https://getbootstrap.com)
 * [JQuery](https://jquery.com)
 
