@@ -55,11 +55,17 @@ useEffect(() => { //if cards match
  }, [selection1, selection2]);
 
  function nextGo() {
-     setSelection1(null)
-     setSelection2(null)
-     setGos((turnBefore) => turnBefore + 1);
-     setClicked(false)
-     setSolved(false)
+
+    if (solved) {
+        setGos(go)
+    } else {
+        setGos( (turnBefore) => turnBefore + 1 );
+    }
+        
+    setSelection1(null)
+    setSelection2(null)
+    setClicked(false)
+    setSolved(false)
  }
 
  useEffect(() => {
@@ -68,6 +74,7 @@ useEffect(() => { //if cards match
 
     return (
         <div className="board">
+        <h2 className="text-center mb-4">You have had {go} gos</h2>
             <Row>
                 { cards.map((card, index) =>(
                         <Col key={card.key} xs="14" sm="3">
@@ -83,8 +90,11 @@ useEffect(() => { //if cards match
                 ))}
             </Row>
             <Row>
-                <Button className="w-25 d-flex align-self-center justify-content-center" style={{ backgroundColor: "#FB6245", color: "#ffff" }} variant="outline-primary" onClick={randomiseCards}>New Game</Button>
-                <p>You have had {go} gos</p>
+            <div class="container bg-light">
+                <div class="col-md-12 text-center">
+                    <Button className="w-25" style={{ backgroundColor: "#FB6245", color: "#ffff", marginTop: "5vh" }} variant="outline-primary" onClick={randomiseCards}>New Game</Button>
+                </div>
+            </div>
             </Row>
         </div>
     )
