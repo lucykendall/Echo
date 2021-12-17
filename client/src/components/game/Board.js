@@ -10,6 +10,7 @@ export default function Board() {
     const [selection2, setSelection2] = useState(null) // cards matched up, i.e. no longer able to be matched
     const [go, setGos] = useState(0);
     const [clicked, setClicked] = useState(false)
+    const [solved, setSolved] = useState(false)
 
     //randomising cards
     function randomiseCards() { 
@@ -21,6 +22,7 @@ export default function Board() {
         setSelection2(null)
         setCards(randomiseCards)
         setGos(0);
+        setSolved(false)
     }
 
     function handleClick(card) {
@@ -38,6 +40,7 @@ useEffect(() => { //if cards match
                 setCards((prevCards) => {
                     return prevCards.map((card) => {
                         if (card.name === selection1.name) {
+                            setSolved(true)
                             return { ...card, solved: true}
                         } else {
                             return card
@@ -56,6 +59,7 @@ useEffect(() => { //if cards match
      setSelection2(null)
      setGos((turnBefore) => turnBefore + 1);
      setClicked(false)
+     setSolved(false)
  }
 
  useEffect(() => {
@@ -72,6 +76,7 @@ useEffect(() => { //if cards match
                                 index={index}
                                 handleClick={handleClick}
                                 clicked={clicked}
+                                solved={solved}
                                 flipped={ card === selection1 || card === selection2 || card.solved} //card is flipped and to the front
                                 />
                         </Col>
