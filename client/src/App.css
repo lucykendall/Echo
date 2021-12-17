@@ -1,14 +1,8 @@
-.individual-card {
-    position: relative; }
-    .individual-card img {
+.individual-card img {
       width: 100%;
       border: 2px solid #fff;
       border-radius: 6px; }
   
-/* .front .front-img {
-    transform: rotateY(0deg);
-    transition-delay: .2s; }
-  
-.front .back-img {
-    transform: rotateY(90deg);
-    transition-delay: 0s; } */
+body {
+    background-color: rgb(250,246,255);
+}

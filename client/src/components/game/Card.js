@@ -3,8 +3,8 @@ import Flippy, {FrontSide, BackSide } from 'react-flippy';
 import { Seaweed } from "../../images";
 
 const FlippyStyle = {
-    width: '200px',
-    height: '200px',
+    width: '150px',
+    height: '150px',
     justifyContent: 'center',
 }
  

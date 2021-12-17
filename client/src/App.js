@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Container } from 'react-bootstrap'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { AuthProvider } from './contexts/AuthContext';
@@ -12,7 +11,6 @@ import SignUp from './pages/SignUp'
 import UpdateAccount from './pages/Update';
 import Play from './pages/Play'
 import ForgotPassword from './pages/ForgotPassword';
-import About from './pages/About';
 import './App.css'
 
 function App() {
@@ -28,7 +26,6 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home/>} />
                 <Route path="/signup" element={<SignUp/>} />
-                <Route path="/about" element={<About/>} />
                 <Route path="/play" element={<Play/>} />
                 <Route path="/login" element={<Login/>} />
                 <Route path="/forgot-password" element={<ForgotPassword/>} />

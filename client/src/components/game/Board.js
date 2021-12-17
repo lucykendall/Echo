@@ -73,12 +73,15 @@ useEffect(() => { //if cards match
  }, []);
 
     return (
-        <div className="board">
-        <h2 className="text-center mb-4">You have had {go} gos</h2>
+        <div className="d-flex align-items-center justify-content-center flex-column justify-items-center">
             <Row>
+                <h4 className="text-center mb-2">You have had {go} gos</h4>
+            </Row>
+            <Row className="d-flex justify-content-center">
                 { cards.map((card, index) =>(
                         <Col key={card.key} xs="14" sm="3">
                             <Card id='name'
+                                className="d-flex align-items-center"
                                 card={card}
                                 index={index}
                                 handleClick={handleClick}
@@ -90,11 +93,9 @@ useEffect(() => { //if cards match
                 ))}
             </Row>
             <Row>
-            <div class="container bg-light">
                 <div class="col-md-12 text-center">
-                    <Button className="w-25" style={{ backgroundColor: "#FB6245", color: "#ffff", marginTop: "5vh" }} variant="outline-primary" onClick={randomiseCards}>New Game</Button>
+                    <Button className="w-100" style={{ backgroundColor: "#FB6245", color: "#ffff", marginTop: "5vh", marginBottom: "5vh" }} variant="outline-primary" onClick={randomiseCards}>New Game</Button>
                 </div>
-            </div>
             </Row>
         </div>
     )
