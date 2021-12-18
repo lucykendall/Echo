@@ -75,11 +75,11 @@ useEffect(() => { //if cards match
     return (
         <div className="d-flex align-items-center justify-content-center flex-column justify-items-center">
             <Row>
-                <h4 className="text-center mb-2">You have had {go} gos</h4>
+                <h4 className="text-center mb-2">Turns: {go}</h4>
             </Row>
             <Row className="d-flex justify-content-center">
                 { cards.map((card, index) =>(
-                        <Col key={card.key} xs="14" sm="3">
+                        <Col key={card.key} xl="14" sm="3">
                             <Card id='name'
                                 className="d-flex align-items-center"
                                 card={card}

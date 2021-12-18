@@ -3,8 +3,8 @@ import Flippy, {FrontSide, BackSide } from 'react-flippy';
 import { Seaweed } from "../../images";
 
 const FlippyStyle = {
-    width: '180px',
-    height: '180px',
+    width: '140px',
+    height: '140px',
     justifyContent: 'center',
 }
  
@@ -30,7 +30,7 @@ export default function Card( {handleClick, flipped, clicked, card, solved} ) {
                     flipOnClick={disabled}
                 >
                     <FrontSide>
-                        <img className="front-img" style = {{ width: "180px", height: "180px" }} src = { Seaweed } alt="seaweed"/>
+                        <img className="front-img"src = { Seaweed } alt="seaweed"/>
                     </FrontSide>
                     <BackSide>
                         <img className="back-img" src ={ card.image } alt="fish"/>  
