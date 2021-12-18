@@ -102,12 +102,12 @@ To get started with this app on your own machine, ensure you follow these steps.
 <!-- ROADMAP -->
 ## Future Improvements
 
-- [Leaderboard] Leaderboard
-- [Firebase] Database with users game history and scores
-- [Auth] Two factor auth
-- [Gameplay] More memory games
-    - [] Multiplayer gameplay
-    - [] Messaging between users
+- Leaderboard
+- Database with users game history and scores
+- Two factor auth
+- More memory games
+    - Multiplayer gameplay
+    - Messaging between users
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
