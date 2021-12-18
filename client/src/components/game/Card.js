@@ -29,10 +29,10 @@ export default function Card( {handleClick, flipped, clicked, card, solved} ) {
                     style={FlippyStyle}
                     flipOnClick={disabled}
                 >
-                    <FrontSide>
+                    <FrontSide style = {{ width: "100%", height: "auto" }}>
                         <img className="front-img" src = { Seaweed } style = {{ width: "100%", height: "auto" }} alt="seaweed"/>
                     </FrontSide>
-                    <BackSide>
+                    <BackSide style = {{ width: "100%", height: "auto" }}>
                         <img className="back-img" src ={ card.image } style = {{ width: "100%", height: "auto"  }} alt="fish"/>  
                     </BackSide>
                 </Flippy>
