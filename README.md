@@ -36,7 +36,6 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -64,7 +63,7 @@ This app is an Under the Sea themed memory game that allows users to login, sign
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get started with this app, ensure you follow these steps.
+To get started with this app on your own machine, ensure you follow these steps.
 ### Installation
 
 1. Get a free API Key at [firebase](https://firebase.google.com/)
@@ -93,32 +92,20 @@ To get started with this app, ensure you follow these steps.
    ```js
    apiKey: process.env.REACT_APP_API_KEY,
    ```
-  .env file
+5. .env file
    ```js
    REACT_APP_API_KEY=[insert api key here]
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 <!-- ROADMAP -->
 ## Roadmap
 
-- [] Leaderboard
-- [] Database with users game history and scores
-- [] Two factor auth
-- [] More memory games
+- [Leaderboard] Leaderboard
+- [Firebase] Database with users game history and scores
+- [Auth] Two factor auth
+- [Gameplay] More memory games
     - [] Multiplayer gameplay
     - [] Messaging between users
 
