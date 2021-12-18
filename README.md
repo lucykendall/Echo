@@ -100,14 +100,14 @@ To get started with this app on your own machine, ensure you follow these steps.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- ROADMAP -->
-## Future Improvments
+## Future Improvements
 
-- Leaderboard
-- Database with users game history and scores
-- Two factor auth
-- More memory games
-    - Multiplayer gameplay
-    - Messaging between users
+- [Leaderboard] Leaderboard
+- [Firebase] Database with users game history and scores
+- [Auth] Two factor auth
+- [Gameplay] More memory games
+    - [] Multiplayer gameplay
+    - [] Messaging between users
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -139,9 +139,8 @@ Live Site: [https://echo-9493d.web.app/](https://echo-9493d.web.app/)
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
+* [Web Dev Simplified](https://github.com/WebDevSimplified/React-Firebase-Auth)
+* [General Asssembly Team](https://generalassemb.ly/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
