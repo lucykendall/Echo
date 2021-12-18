@@ -73,12 +73,29 @@ To get started with this app, ensure you follow these steps.
    git clone https://github.com/lucykendall/Echo
    ```
 3. Install dependencies
+
    ```sh
-   npm install
+   npm install firebase
    ```
-4. Enter your API in `config.js`
+
+   ```sh
+   npm install react-router-dom
+   ```
+
+   ```sh
+   npm install react-bootstrap
+   ```
+   
+   ```sh
+   npm install react-bootstrap
+   ```
+4. Create a .env file and make sure that your keys match the exact details in your `firebase.js`, i.e.
    ```js
-   const API_KEY = 'ENTER YOUR API';
+   apiKey: process.env.REACT_APP_API_KEY,
+   ```
+  .env file
+   ```js
+   REACT_APP_API_KEY=[insert api key here]
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -93,7 +110,6 @@ Use this space to show useful examples of how a project can be used. Additional 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- ROADMAP -->
@@ -131,7 +147,6 @@ Project Link: [https://github.com/lucykendall/Echo](https://github.com/lucykenda
 Live Site: [https://echo-9493d.web.app/](https://echo-9493d.web.app/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- ACKNOWLEDGMENTS -->
