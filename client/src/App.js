@@ -19,7 +19,7 @@ function App() {
     <Container
     className="d-flex align-items-center justify-content-center"
     style={{ minHeight: "100vh", backgroundColor: "rgb(250,246,225)" }}>
-    <div className="w-100" style={{ maxWidth: "900px" }}>
+    <div className="w-100" style={{ maxWidth: "1000px" }}>
         <Router>
           <NavBar />
             <AuthProvider>
