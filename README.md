@@ -51,7 +51,6 @@
 This app is an Under the Sea themed memory game that allows users to login, signup, update their account, and play a memory game.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 ### Built With
 
 * [React-Bootstrap](https://react-bootstrap.github.io/)
@@ -126,17 +125,6 @@ Don't forget to give the project a star! Thanks again!
 5. Open a Pull Request
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- CONTACT -->
 ## Contact
