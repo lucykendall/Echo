@@ -87,7 +87,7 @@ To get started with this app, ensure you follow these steps.
    ```
    
    ```sh
-   npm install react-bootstrap
+   npm i react-flippy
    ```
 4. Create a .env file and make sure that your keys match the exact details in your `firebase.js`, i.e.
    ```js
