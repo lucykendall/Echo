@@ -77,9 +77,9 @@ useEffect(() => { //if cards match
             <Row>
                 <h4 className="text-center mb-2" style= {{ padding: 10 }}>Turns: {go}</h4>
             </Row>
-            <Row className="d-flex justify-content-center">
+            <Row className="d-flex justify-content-center" style = {{ padding: 10 }}>
                 { cards.map((card, index) =>(
-                        <Col key={card.key} xl="14" sm="3" className="d-flex justify-content-center">
+                        <Col key={card.key} xl="15" sm="3" className="d-flex justify-content-center">
                             <Card id='name'
                                 className="d-flex align-items-center"
                                 card={card}
