@@ -75,7 +75,7 @@ useEffect(() => { //if cards match
     return (
         <div className="d-flex align-items-center justify-content-center flex-column justify-items-center">
             <Row>
-                <h4 className="text-center mb-2">Turns: {go}</h4>
+                <h4 className="text-center mb-2" style= {{ padding: 10 }}>Turns: {go}</h4>
             </Row>
             <Row className="d-flex justify-content-center">
                 { cards.map((card, index) =>(
