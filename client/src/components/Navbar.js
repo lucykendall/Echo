@@ -6,7 +6,7 @@ export default function NavBar() {
     return (
     <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: "#FA8164", borderRadius: "20px", marginTop:"5vh"}}>
     <Container className="d-flex align-items-center justify-content-center"
-    style={{ maxWidth: "700px", maxHeight: "200px" }}>
+    style={{ maxWidth: "700px", maxHeight: "500px" }}>
     <Navbar.Brand href="/"><img src={img} alt="logo" className="img-fluid" style={{ width: "100px" }}/>
     </Navbar.Brand>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
