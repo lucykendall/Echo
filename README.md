@@ -115,7 +115,7 @@ To get started with this app on your own machine, ensure you follow these steps.
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are **greatly appreciated**.
+Contributions are **greatly appreciated**!
 
 Follow these steps to clone and make amendments to the project:
 
